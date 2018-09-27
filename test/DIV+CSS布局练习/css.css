@@ -1,0 +1,19 @@
+/*基本信息*/
+body {font:12px Tahoma;margin:0px;text-align:center;background:#FFF;}
+a:link,a:visited {font-size:12px;text-decoration:none;}
+a:hover{}
+
+/*页面层容器*/
+#container {width:800px;margin:10px auto}
+#menu {padding:20px 20px 0 0}
+/*利用padding:20px 20px 0 0来固定菜单位置*/
+/* #menu ul {list-style:none;margin:0px;}
+#menu ul li {float:left;margin:0 10px} */
+
+#menu ul {float:right;list-style:none;margin:0px;}
+/*添加了float:right使得菜单位于页面右侧*/
+#menu ul li {float:left;margin:0 10px}
+.menuDiv {width:1px;height:28px;background:#999}
+#menu ul li a:link,#menu ul li a:visited {font-weight:bold;color:#666}
+#menu ul li {float:left;margin:0 10px;display:block;line-height:28px}
+#menu ul li a:hover{}

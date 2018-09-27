@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script>
+	window.onload = function(){
+		var ali = document.getElementsByTagName('input');
+		ali[0].onclick = function(){
+			for(var i = 1;i<ali.length;i++){
+				ali[i].checked = !ali[i].checked;
+			}	
+		}
+	}
+</script>
+<body>
+<input type="button" value="反选"/>
+<ul>
+	<li><input type="checkbox" checked /></li>
+    <li><input type="checkbox" /></li>
+    <li><input type="checkbox" checked /></li>
+    <li><input type="checkbox" /></li>
+    <li><input type="checkbox" checked /></li>
+</ul>
+</body>
+</html>

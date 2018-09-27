@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>appearance_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+</head>
+<body>
+请选择要测试的appearance值：
+<select id="choice"></select><br>
+<span></span>
+<script>
+(function() {
+	var $ = opener.$,
+		choice = document.getElementById("choice");
+	choice.onchange = function() {
+		var val = this.value,
+			span = $("span", document).css("appearance", val);
+		span.html(val === span.css("appearance") ? "" : "不支持");
+	}
+	$("#value dt").each(function(i) {
+		var val = this.innerHTML.replace(/[^\w-]/g, "");
+		choice.options[i] = new Option(val, val);
+	});
+})();
+</script>
+</body>
+</html>
+			

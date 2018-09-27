@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js库/util.js"></script>
+<style>
+#div1{left:30px;top:50px;background:red;width:100px;height:100px;position:absolute;}
+</style>
+<script>
+$(function(){
+	$('btn1').onclick = function(){
+		doMove($('div1'),'left',19,800,function(){
+			doMove($('div1'),'top',34,500);
+		});
+	}	
+});
+</script>
+</head>
+
+<body>
+<input id="btn1" type="button" value="按钮"/>
+<div id="div1"></div>
+</body>
+</html>

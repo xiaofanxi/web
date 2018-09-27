@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="F:/Workspaces\/web/test/lib/vue.js"></script>
+<script type="text/javascript">
+	console.log(window);
+	window.onload = function(){
+		/*var app4 = new Vue({
+	 	 	el: '#app-4',
+	  		data: {
+	   			abs: [
+	     			{ text: 'Learn JavaScript' },
+	      			{ text: 'Learn Vue' },
+	      			{ text: 'Build something awesome' }
+	   			]
+	  		}
+		});*/
+		/*var app3 = new Vue({
+		 	el: '#app-3',
+			data: {
+		    	afv: true
+		 	}
+		});*/
+		/*var app5 = new Vue({
+  			el: '#app-5',
+	  		data: {
+			    message: 'Hello Vue.js!'
+			},
+	  		methods: {
+	    		reverseMessage: function () {
+	     	 		this.message = this.message.split('').reverse().join('');
+				}
+	  		}
+		});*/
+		
+		var app6 = new Vue({
+		  	el: '#app-6',
+		  	data: {
+		    	message: 'Hello Vue!'
+		  	}
+		});
+
+		Vue.component('todo-item', {
+		  props: ['todo'],
+		 // template: '<li>{{ todo.text }}</li>'
+		  template: '<input value="{{ todo.text }}">'
+		});
+		var app7 = new Vue({
+	  		el: '#app-7',
+	  		data: {
+	   			todos: [
+	    			{ text: 'Learn JavaScript' },
+	      			{ text: 'Learn Vue' },
+	      			{ text: 'Build something awesome' }
+	   			]
+	  		}
+		});
+
+	}
+	
+</script>
+</head>
+<body>
+<!--<div id="app-4">
+ 	<ol>
+   	 	<li v-for="todo in abs">
+     		{{ todo.text }}
+   		</li>
+  	</ol>
+</div>-->
+<div id="app-3">
+  	<p v-if="afv">Now you see me</p>
+</div>
+<div id="app-5">
+	<p>{{ message }}</p>
+	<button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+<!--<div id="app-6">
+	<!--<p>{{ message }}</p>-->
+	<input v-model="message">
+</div>-->
+<!--<div id="app-7">
+	<ol>
+		<!--
+		    Now we provide each todo-item with the todo object
+		    it's representing, so that its content can be dynamic
+	    -->
+		<todo-item v-for="todo in todos" v-bind:todo="todo"></todo-item>
+	</ol>
+</div>--> <div id="app-6">
+	<input v-model="message">
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+// JavaScript Document
+/*
+ 1.BOM 浏览器对象模型
+ 核心对象:window  所有全局变量,函数都会成为window对象属性和方法
+	var age = 343;
+	alert(age);
+	alert(this.age);
+	alert(window.age);
+
+ */
+/*var age = 343;
+window.color = 'red';
+delete window.age;
+delete window.color;
+alert(window.age);
+alert(window.color);*/
+/*var a1=295.34;
+var a2=14.77;
+    alert(a1+a2);
+    alert((a1+a2).toFixed(2));*/
+window.moveBy(200,300)
+var leftPos = (typeof window.screenLeft == 'Number')?window.screenLeft:window.screenX;
+var topPos = (typeof window.screenTop == 'Number')?window.screenTop:window.screenY;
+    alert(leftPos);
+    alert(topPos);
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<input type="button" value="暂停">
+<script>
+    i = 0;
+    function fn1(){
+        document.title = i;
+        i++;
+        /*if(i>30){
+            clearInterval(timer);
+
+        }*/
+    }
+    //timer = setInterval(fn1,100);
+    timer1 = setTimeout(fn1,2000);
+    var btn = document.getElementsByTagName("input")[0];
+    console.log(btn);
+    btn.onclick = function () {
+        clearTimeout(timer1);
+    }
+</script>
+</body>
+</html>

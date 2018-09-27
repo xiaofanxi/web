@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image-slice_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test1,
+.test2 {
+	margin-top: 10px;
+	padding: 5px;
+	border-width: 1px 9px;
+	border-style: solid;
+	border-color: orange;
+	border-image-source: url(logo.jpg);
+	border-image-repeat: repeat stretch;
+}
+.test1 {
+	border-image-slice: 1 9;
+}
+.test2 {
+	border-image-slice: 1 9 fill;
+}
+</style>
+</head>
+<body>
+<div class="test1">不保留裁减后的中间区域</div>
+<div class="test2">保留裁减后的中间区域</div>
+</body>
+</html>
+			

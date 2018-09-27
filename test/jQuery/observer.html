@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+        <title>实现Observer模式.</title>
+        
+        <script language=JavaScript>
+        function Observer() {
+            this.fns = [];
+        }
+        Observer.prototype = {
+            subscribe : function(fn) {
+                this.fns.push(fn);
+            },
+            unsubscribe : function(fn) {
+                this.fns = this.fns.filter(
+                    function(el) {
+                        if ( el !== fn ) {
+                            return true;
+                        }else{
+                            return true;
+                        }
+                    }
+                );
+            },
+            fire : function(o, thisObj) {
+                var scope = thisObj || window;
+                this.fns.forEach(
+                    function(el) {
+                        el.call(scope, o);//相当于：window.fn1(参数)  其中，参数是o.fire('xyz')中的xyz，转移成fn1和fn2执行了.
+                    }
+                );
+            }
+        };
+        
+        var o = new Observer;
+        var fn1 = function(p) {
+            alert("fn1" + p);
+        };
+        var fn2 = function(p) {
+            alert("fn2 " + p);
+        };
+        o.subscribe(fn1);
+        console.log(o);
+        o.subscribe(fn2);
+        console.log(o);
+//        o.unsubscribe(fn1);
+//        console.log(o);
+        o.fire('xyz');
+        
+        </script>
+
+    </head>
+    <body>
+    </body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft yahei", serif;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+    <!--<script src="js/sea.js"></script>-->
+   <!-- <script src="js/wulv.js"></script>-->
+</head>
+<body>
+<div id="box"></div>
+<script>
+    seajs.use("./js/module.js",function(dom){
+        console.log(dom);
+       // console.log(dom("box"));
+    });
+   /* wulv5("./js/module.js",function (dom) {
+        console.log(dom);
+    });*/
+</script>
+</body>
+</html>

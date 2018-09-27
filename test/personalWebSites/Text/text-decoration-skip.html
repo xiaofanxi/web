@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>text-decoration-skip_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test {
+    width: 120px;
+    margin-top: 10px;
+    -webkit-text-decoration: underline;
+    -moz-text-decoration: underline;
+    text-decoration: underline;
+    padding: 0 50px;
+}
+.test li {
+    -webkit-text-decoration-skip: objects;
+    -moz-text-decoration-skip: objects;
+    text-decoration-skip: objects;
+}
+.test span {
+    display: inline-block;
+}
+</style>
+</head>
+<body>
+<div class="test">文本装饰将在<span>每一行</span>都出现</div>
+</body>
+</html>
+			

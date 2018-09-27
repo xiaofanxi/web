@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js库/util.js"></script>
+<script>
+	alert(new Date());
+	window.onload = function(){
+		var oBody = document.body;
+		setInterval(fn,1000);
+		function fn(){
+			var str = '';
+			var myTime = new Date();
+			var Year = myTime.getFullYear();
+			var Month = myTime.getMonth()+1;
+			var iDate = myTime.getDate();
+			var Week = myTime.getDay();
+			var Hours = myTime.getHours();
+			var Minutes = myTime.getMinutes()
+			var Seconds = myTime.getSeconds();
+			if(Week===1)Week = '星期一';
+			if(Week===2)Week = '星期二';
+			if(Week===3)Week = '星期三';
+			if(Week===4)Week = '星期四';
+			if(Week===5)Week = '星期五';
+			if(Week===6)Week = '星期六';
+			if(Week===0)Week = '星期日';
+			str = Year+'年'+Month+'月'+iDate+'日 '+Week+' '+toTwo(Hours)+':'+toTwo(Minutes)+':'+toTwo(Seconds);
+			oBody.innerHTML = str;
+		}		
+	}
+	
+	alert(iDate);
+</script>
+</head>
+
+<body>
+</body>
+</html>

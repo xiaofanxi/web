@@ -1,0 +1,1 @@
+var two=require("./2.js");two("wuvo"),console.log(two),console.log("abc");

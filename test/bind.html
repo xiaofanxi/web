@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function bind(fn, context){
+        return function(){
+            return fn.apply(context, arguments);
+        };
+    }
+    var handler = {
+        message: "Event handled",
+        handleClick: function(event){
+            alert(this.message);
+        }
+    };
+    var btn = document.getElementById("my-btn");
+    EventUtil.addHandler(btn, "click", bind(handler.handleClick, handler));
+</script>
+
+
+</body>
+</html>

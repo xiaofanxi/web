@@ -1,0 +1,172 @@
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<title>3D场景互动</title>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<style>
+			html{
+				font-size:570%;
+			}
+			*{
+				margin:0;
+				padding:0;
+			}
+			.wrap{
+				position:relative;
+				width:100%;
+			}
+			.wrap .prefrom{
+				position:relative;
+				width:100%;
+				height:6.81rem;
+				background:rgba(230,190,22,.9);
+			}
+			.wrap .prefrom .bg_wrap{
+				z-index:1;
+				position:absolute;
+				left:50%;
+				margin-left:-5.5rem;
+				bottom:0;	
+				width:12.06rem;
+				height:100%;
+			}
+			.prefrom .bg_wrap img{
+				position:absolute;
+			}
+			.prefrom .bg_wrap .luce{
+				z-index:1;
+				bottom:0;
+				width:100%;
+			}
+			.prefrom .bg_wrap .base{
+				z-index:2;
+				left:50%;
+				margin-left:-7.42rem;
+				bottom:-2.03rem;
+				width:100%;			    		
+			}
+			.wrap .prefrom .group{
+				position:relative;
+				margin-left:auto;
+				margin-right:auto;
+				width:8.48rem;
+				height:8.6rem;				
+			}
+			.wrap .prefrom .group img{
+				position:absolute;
+			}
+			.wrap .prefrom .group img.colori{
+				z-index:1;
+				top:2.5rem;
+				left:1.9rem;
+				width:5.17rem;
+				height:1.01rem;
+			}
+			.wrap .prefrom .group img.uccello{
+				z-index:2;
+				left:1rem;
+				top:2.6rem;
+				width:1.37rem;
+				height:1.45rem;
+			}
+			.wrap .prefrom .group img.fish2{
+				z-index:3;
+				left:2.9rem;
+				top:2.8rem;
+				width:3.15rem;
+				height:2.91rem;
+			}
+			.wrap .prefrom .group img.cerchio{
+			  width:.8rem;
+			  height:.8rem;
+			  top:5rem;
+			  left:1.8rem;
+			  z-index:1;
+			}
+			.wrap .prefrom .group img.penna{
+			  width:3.37rem;
+			  height:1.83rem;
+			  top:5.8rem;
+			  left:.4rem;
+			  z-index:1;
+			}
+			.wrap .prefrom .group img.bolla{
+			  width:1.71rem;
+			  height:1.75rem;
+			  top:4.2rem;
+			  left:.2rem;
+			  z-index:2;
+			}
+			.wrap .prefrom .group img.ciambella{
+			  width:2.86rem;
+			  height:2.92rem;
+			  top:3.8rem;
+			  left:2rem;
+			  z-index:5;
+			}
+			.wrap .prefrom .group img.occhiali{
+			  width:1.96rem;
+			  height:1.13rem;
+			  top:1.8rem;
+			  left:6.2rem;
+			  z-index:5;
+			}
+			.wrap .prefrom .group img.mela{
+			  width:1.09rem;
+			  height:1.02rem;
+			  top:3.2rem;
+			  left:5.86rem;
+			  z-index:2;
+			}
+			.wrap .prefrom .group img.cerchio2{
+			  width:.83rem;
+			  height:.83rem;
+			  top:5.7rem;
+			  left:5.5rem;
+			  z-index:1;
+			}
+			.wrap .prefrom .group img.bomboletta{
+			  width:1.07rem;
+			  height:1.35rem;
+			  top:5.9rem;
+			  left:5.6rem;
+			  z-index:2;
+			}
+			.wrap .prefrom .group img.mouse{
+			  width:4.32rem;
+			  height:3.68rem;
+			  top:4.1rem;
+			  left:5.6rem;
+			  z-index:3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="prefrom">
+				<div class="bg_wrap">
+					<img class="luce" src="images/bg_luce.png" alt="" />
+					<img class="base" src="images/grafica_base.png" alt="" />
+				</div>
+				<div class="group">
+					<img class="bolla" src="images/bolla.png" alt="" />
+					<img class="bomboletta" src="images/bomboletta.png" alt="" />
+					<img class="cerchio" src="images/cerchio.png" alt="" />
+					<img class="cerchio2" src="images/cerchio2.png" alt="" />
+					<img class="ciambella" src="images/ciambella.png" alt="" />
+					<img class="colori" src="images/colori.png" alt="" />
+					<img class="fish2" src="images/fish2.png" alt="" />
+					<img class="mela" src="images/mela.png" alt="" />
+					<img class="mouse" src="images/mouse.png" alt="" />
+					<img class="occhiali" src="images/occhiali.png" alt="" />
+					<img class="penna" src="images/penna.png" alt="" />
+					<img class="uccello" src="images/uccello.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

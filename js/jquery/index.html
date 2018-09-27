@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft yahei", serif;
+        }
+
+        li {
+            list-style: none;
+        }
+        #wrap{
+            position: relative;
+            background: greenyellow;
+            margin: 20px;
+            width: 300px;
+            height: 300px;
+        }
+        #box{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 200px;
+            left: 150px;
+            background: red;
+        }
+    </style>
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body style="height: 2000px;">
+<!--<div id="wrap">
+    <div id="box"></div>
+</div>-->
+<!--<p class="goudan">one</p>
+<p class="goudan">two</p>
+<p class="goudan">three</p>-->
+<script>
+    /*$(".goudan").get(1).innerHTML = "ada";*/
+    /*$(".goudan").eq(1).html("adg");*/
+    /*$(".goudan").each(function (i) {
+        $(this).html(""+i+i+i);
+        console.log(""+i+i+i);
+        console.log($(".goudan").index());
+     ;
+    });*/
+    /*console.log($("#box").offset({top:100,left:0}));*/
+  /*  $(function () {
+        $(document).scrollTop( 200 );
+    })*/
+
+   /* console.log($(window).width());
+    console.log(document.body.clientWidth);
+    console.log($(window).height());
+    console.log(document.body.clientHeight);
+    $("a").click(function(event) {
+        event.preventDefault();
+        $('<div/>').append('default ' + event.type + ' prevented').appendTo('#log');
+    });*/
+    var settings = { validate: false, limit: 5, name: "foo" };
+    var options = {validate: true, name: "bar"  };
+    console.log(jQuery.extend(false,settings, options));
+    var b = {
+        a:function () {
+            console.log(3);
+        }
+    };
+    if(b.a){
+        $("<div>1</div>").appendTo($("#log").find(""));
+        console.log(1);
+    }else{
+        console.log(2);
+    }
+    var a;
+    console.log(a);
+    var c = new window();
+    console.log(c);
+
+</script>
+<a href="http://jquery.com">default click action is prevented</a>
+<div id="log" class="log"></div>
+
+</body>
+</html>

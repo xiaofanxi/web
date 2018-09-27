@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript">
+		function getZWeekDay(x,y,z){//x年,y月,z第z周
+			var Monday = new Date();
+			var Sunday = new Date();
+			if(y==0){
+				alert("输入月份错误!");
+			}else{
+				Monday.setFullYear(x,y-1,1);//输入月份第一天
+			}
+			if(Monday.getDay()==0){//
+				Monday.setFullYear(x,y-1,2+(z-1)*7);
+				Sunday.setFullYear(x,y-1,2+(z-1)*7+6);	
+			}else if(Monday.getDay()==1){
+				Monday.setFullYear(x,y-1,1+(z-1)*7);
+				Sunday.setFullYear(x,y-1,1+(z-1)*7+6);	
+			}else if(Monday.getDay()==2){
+				Monday.setFullYear(x,y-1,7+(z-1)*7);
+				Sunday.setFullYear(x,y-1,7+(z-1)*7+6);	
+			}else if(Monday.getDay()==3){
+				Monday.setFullYear(x,y-1,6+(z-1)*7);
+				Sunday.setFullYear(x,y-1,6+(z-1)*7+6);	
+			}else if(Monday.getDay()==4){
+				Monday.setFullYear(x,y-1,5+(z-1)*7);
+				Sunday.setFullYear(x,y-1,5+(z-1)*7+6);	
+			}else if(Monday.getDay()==5){
+				Monday.setFullYear(x,y-1,4+(z-1)*7);
+				Sunday.setFullYear(x,y-1,4+(z-1)*7+6);
+			}else if(Monday.getDay()==6){
+				Monday.setFullYear(x,y-1,3+(z-1)*7);
+				Sunday.setFullYear(x,y-1,3+(z-1)*7+6);
+			}
+			return x+"年"+y+"月第"+z+"周周一:"+formatDateTime(Monday)+" 周日: "+formatDateTime(Sunday);		
+		};
+		var formatDateTime = function (date) {  
+			var y = date.getFullYear();  
+			var m = date.getMonth() + 1;  
+			m = m < 10 ? ('0' + m) : m;  
+			var d = date.getDate();  
+			d = d < 10 ? ('0' + d) : d;  				 
+			return y + '-' + m + '-' + d;  
+		};
+document.write(getZWeekDay(2016,4,3));
+</script>  
+</head>
+
+<body>
+</body>
+</html>

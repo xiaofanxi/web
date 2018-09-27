@@ -1,0 +1,37 @@
+<style>
+#idDIV{width:100%;padding:8px;background-color:#FFD700;font-family:verdana,tahoma;font-size:1em ;}
+#idCodeDiv{width:100%;padding:4px;font-family:verdana,tahoma;margin:12px 0px 0px 0px;background-color:#EEEEEE;font-weight:bold;}
+</style>
+
+<script>
+var iValue=1;
+function rdl_doAdd(e){
+var oCodeDiv=document.all("idCodeDiv");
+var oDiv=document.all("idDiv");
+var oNum=document.all("idNum");
+iValue+=1;
+oNum.value=oDiv.style.fontSize=iValue.toString()+"em";
+oCodeDiv.innerTemt="font-size : "+oNum.value+" ; ";
+}
+function rdl_doDvv(e){
+var oCodeDiv=document.all("idCodeDiv");
+var oDiv=document.all("idDiv");
+var oNum=document.all("idNum");
+iValue-=1;
+if (iValue<0) iValue=0;
+oNum.value=oDiv.style.fontSize=iValue.toString()+"em";
+oCodeDiv.innerTemt="font-size : "+oNum.value+" ; ";
+}
+</script>
+
+<div id=idDIV>Every man dies , Not every man really lives .</div>
+<br>
+<br>
+<table><tr><td>
+<input id=idNum type=text value="1em" size=19 readonly>
+</td><td>
+<input type=button onclick="rdl_doAdd();" value=" + " id=idBtn1>
+</td><td>
+<input type=button onclick="rdl_doDvv();" value=" - " id=idBtn2>
+</td></tr></table>
+<div id=idCodeDiv>font-size : 1em ; </div>

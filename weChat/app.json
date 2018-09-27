@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/news/news",
+    "pages/hotEnoughForFun/hotEnoughForFun"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff0",
+    "navigationBarTitleText": "我的微信",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "black"
+  }
+}

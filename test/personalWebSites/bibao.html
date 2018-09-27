@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload = function(){
+		function a(){
+			var i=0;
+			function b(){
+				alert(++i);
+				return false;
+			}
+			return b;
+		}
+		var c=a();
+		c();
+		c();	
+	}
+</script>
+</head>
+
+<body>
+</body>
+</html>

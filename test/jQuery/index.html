@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.10.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+	 $("<div>", {
+  "class": "test",
+  text: "Click me!",
+  click: function(){
+    $(this).toggleClass("test");
+	console.log("1");
+  }
+}).appendTo("body");
+	});	
+	$("<input>", {
+  type: "text",
+  val: "Test",
+  focusin: function() {
+    $(this).addClass("active");
+  },
+  focusout: function() {
+    $(this).removeClass("active");
+  }
+}).appendTo("form");
+</script>
+</head>
+
+<body>
+<form>
+	<p>fhaoh</p>
+</form>
+</body>
+</html>

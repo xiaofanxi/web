@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>\</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft yahei", serif;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("get","1.php",true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if ( this.readyState === 4 ){
+            var status = this.status;
+            if ( status >= 200 && status < 300 ){
+                console.log(this.responseText);
+            }
+        }
+    };
+</script>
+</body>
+</html>

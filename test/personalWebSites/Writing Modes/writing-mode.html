@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>writing-mode_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{width:100px;height:100px;margin:10px;border:1px solid #aaa;}
+.lr-tb{-webkit-writing-mode:horizontal-tb;writing-mode:lr-tb;writing-mode:horizontal-tb;}
+.tb-rl{-webkit-writing-mode:vertical-rl;writing-mode:tb-rl;writing-mode:vertical-rl;}
+.tb-lr{-webkit-writing-mode:vertical-lr;writing-mode:tb-rl;writing-mode:vertical-lr;}
+</style>
+</head>
+<body>
+<div class="test lr-tb">本段文字将按照水平从左到右的书写方向进行流动。</div>
+<div class="test tb-rl">本段文字将按照垂直从右到左的书写方向进行流动。</div>
+<div class="test tb-lr">本段文字将按照垂直从左到右的书写方向进行流动。</div>
+<ul class="tb-rl">
+	<li class="test">本段文字将按照垂直从右到左的书写方向进行流动。</li>
+	<li class="test">本段文字将按照垂直从右到左的书写方向进行流动。</li>
+</ul>
+<ul class="tb-lr">
+	<li class="test">本段文字将按照垂直从左到右的书写方向进行流动。</li>
+	<li class="test">本段文字将按照垂直从左到右的书写方向进行流动。</li>
+</ul>
+</body>
+</html>
+			

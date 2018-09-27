@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Vue.js学习笔记</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="F:/Workspaces/web/lib/require.js"></script>
+</head>
+<body>
+	<div id="app"> 
+		{{ message }}
+	</div> 
+	<script type="text/javascript">
+		require.config({
+			paths:{
+				"vue": "../lib/vue"
+			}
+		})
+		require(['vue'],function(Vue){
+			var app = new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello Vue!'
+				}
+			});
+			console.log(app);
+		});	
+	</script>
+</body>
+</html>

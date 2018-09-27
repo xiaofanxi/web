@@ -1,0 +1,25 @@
+<style>
+#idDIV{width:100%;height:80px;background-color:#FFD700;padding:4px;font-family:verdana,tahoma;font-weight:bold;}
+#idCodeDiv{width:100%;padding:4px;font-family:verdana,tahoma;margin:12px 0px 0px 0px;background-color:#EEEEEE;font-weight:bold;}
+</style>
+
+<script>
+function rdl_change(e){
+var oCodeDiv=document.all("idCodeDiv");
+var oDiv=document.all("idDiv");
+with (document.all("idSel")) var sValue=options[selectedIndex].value;
+oDiv.style.fontStyle=sValue;
+oCodeDiv.innerText="font-style : "+sValue+";";
+}
+</script>
+
+<div id=idDIV>Every man dies , Not every man really lives .</div>
+<br>
+<select id="idSel" onchange="rdl_change();">
+<option value="normal">---font-style---
+<option value="normal">normal
+<option value="italic">italic
+<option value="oblique">oblique
+</select>
+<br>
+<div id=idCodeDiv>font-style : normal ;</div>

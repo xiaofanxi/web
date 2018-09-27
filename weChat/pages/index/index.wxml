@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view>
+  <scroll-view scroll-y style="height: 800rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id='header'>
+      <swiper class='swiper' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' 
+      interval='{{interval}}' duration='{{duration}}'>
+          <swiper-item wx:for='{{imgUrls}}'>
+            <navigator url="{{item.navUrl}}">
+              <image src='{{item.url}}'></image>
+            </navigator>
+          </swiper-item>
+      </swiper>
+    </view>
+    <view id="content">
+      <view id="content_hot">
+        <navigator url="{{navUrl}}">
+          <view id="content_img">
+            <image class="imgIcon" src='{{imgIcon}}'></image>
+            <text class='text'>{{iconName}}</text>
+          </view>
+        </navigator>
+      </view>
+      <view id="content_say">
+        <view id="content_tableOfHeart">
+          <text>{{tableOfHeart}}</text>
+        </view>
+        <view>
+          <view wx:for='{{allImgUrls}}' class='view'>
+            <navigator url="{{item.navUrl}}" class='navigator'>
+              <view class='view_img'>
+                <image src='{{item.url}}' class='image'></image>
+                <text class='text'>{{item.title}}</text>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

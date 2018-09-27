@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "星巴克用星说",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "black"
+}

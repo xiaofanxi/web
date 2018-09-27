@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>E::placeholder_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+input::-webkit-input-placeholder {
+	color: green;
+}
+input:-ms-input-placeholder {/* // IE10+*/
+	color: green;
+}
+input:-moz-placeholder { /*// Firefox4-18*/
+	color: green;
+}
+input::-moz-placeholder { /*// Firefox19+*/
+	color: green;
+}
+</style>
+</head>
+<body>
+
+  <input id="test" placeholder="Placeholder text!">
+
+</body>
+</html>
+			

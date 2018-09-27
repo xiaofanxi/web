@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>试验</title>
+	<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+	<script type="text/javascript" src="js/angular-1.0.1.js"></script>
+</head>
+<body>
+	<!-- <div ng-controller="BoxCtrl">
+		<div style="width: 100px; height: 300px; background-color: red;" ng-click="click()"></div>
+		<p>{{ w }} x {{ h }}</p>
+		<p id="test">{{ a }}</p>
+		<p>W: <input type="text" ng-model="w" /></p>
+		<p>H: <input type="text" ng-model="h" /></p>		
+	</div> -->
+	<!-- <div ng-controller="TestCtrl">
+		<div style="width: 500px; height: 10px; background-color: red"></div>
+		<input type="text" name="width" ng-model="width" />
+	</div> -->
+	<!-- <div ng-controller="TestCtrl">
+		<div style="width: 10px; height: 10px; background-color: red" ng-style="style"></div>
+		<input type="text" name="width" ng-model="style1.width" style="width: 50px; height: 50px;" ng-style="style1"/>
+	</div> -->
+	<!-- <div ng-controller="TestCtrl">
+		<ul ng-repeat="db in obj_list">
+			<li>{{ $index }}, {{ db.name }}</li>
+		</ul>
+	</div> -->
+	<!-- <div ng-controller="TestCtrl">
+		<ul ng-repeat="member in obj_list">
+			<li>{{ member }}</li>
+		</ul>
+	</div> -->
+
+
+	<!-- <div ng-controller="TestCtrl" ng-init="a=[1,2,3,4]">
+		<ul ng-repeat="member in a">
+			<li>{{ member }}</li>
+		</ul>
+	</div> -->
+	<!-- <div ng-style="{width: 100, height: 100, backgroundColor: 'red'}"></div> -->
+	<!-- <form name="test_form" ng-controller="TestCtrl">
+		<input type="text" name="a" required ng-model="a"  />
+		<span ng-click="see()">{{ test_form.$valid }}</span>
+	 </form> -->	 
+	 
+	<!-- <form name="test_form" ng-controller="TestCtrl">
+		<input type="text" name="a" required ng-model="a"  />
+		<input type="text" name="b" required ng-model="b" ng-maxlength="2" />
+		<span ng-click="see()">{{ test_form.$error }}</span>
+	</form> -->
+	
+	<!-- <form name="test_form" ng-controller="TestCtrl">
+		<input type="text" name="a" ng-model="a" required ng-pattern="/abc/" />
+		<span ng-click="see()">{{ test_form.$error }}</span>
+	</form> -->
+	<!-- <form name="test_form" ng-controller="TestCtrl">
+		<input type="checkbox" name="a" ng-model="a" ng-true-value="AA" ng-false-value="BB" />
+		<span>{{ a }}</span>
+	</form> -->
+	<!-- <form name="test_form" ng-controller="TestCtrl">
+		<input type="radio" name="a" ng-model="a" value="AA" />
+		<input type="radio" name="a" ng-model="a" value="BB" />
+		<span>{{ a }}</span>
+	</form> -->
+	
+	<!-- <form name="test_form" ng-controller="TestCtrl" ng-init="o=[0,1,2,3]; a=o[1];">
+		<select ng-model="a" ng-options="x for x in o" ng-change="show()">
+			<option value="">可以加这个空值</option>
+		</select>
+	</form> -->
+
+	<!-- <form name="test_form" ng-controller="TestCtrl" ng-init="o=[{name: 'AA'}, {name: 'BB'}]; a=o[1];">
+		<select ng-model="a" ng-options="x.name for x in o" ng-change="show()">
+		</select>
+	</form> -->
+	
+	<!-- <form name="test_form" ng-controller="TestCtrl" ng-init="o=[{name: 'AA', v: '00'}, {name: 'BB', v: '11'}]; a=o[1].v;">
+		<select ng-model="a" ng-options="x.v as x.name for x in o" ng-change="show()">
+		</select>
+	</form> -->
+
+	<!-- <form name="test_form" ng-controller="TestCtrl" ng-init="o=[{name: 'AA', g: '00'}, {name: 'BB', g: '11'}, {name: 'CC', g: '00'}]; a=o[1];">
+		<select ng-model="a" ng-options="x.name group by x.g for x in o" ng-change="show()">
+		</select>
+	</form> -->
+
+	<!-- <form name="test_form" ng-controller="TestCtrl" ng-init="o=[{name: 'AA', g: '00', v: '='},
+		{name: 'BB', g: '11', v: '+'}, {name: 'CC', g: '00', v: '!'}]; a=o[1].v;">
+		<select ng-model="a" ng-options="x.v as x.name group by x.g for x in o" ng-change="show()">
+		</select>
+	</form> -->
+
+	<!-- <form name="test_form" ng-controller="TestCtrl" ng-init="o={a: 0, b: 1}; a=o.a;">
+		<select ng-model="a" ng-options="v for (k, v) in o" ng-change="show()">
+		</select>
+	</form>
+
+	<form name="test_form" ng-controller="TestCtrl" ng-init="o={a: {name: 'AA', v: '00'}, b: {name: 'BB', v: '11'}}; a=o.a.v;">
+		<select ng-model="a" ng-options="v.v as v.name for (k, v) in o" ng-change="show()">
+		</select>
+	</form>  
+
+	<form name="test_form" ng-controller="TestCtrl" ng-init="o={a: {name: 'AA', v: '00', g: '=='}, b: {name: 'BB', v: '11', g: '=='}}; a=o.a;">
+		<select ng-model="a" ng-options="v.name group by v.g for (k, v) in o" ng-change="show()">
+		</select>
+	</form>  
+
+	<form name="test_form" ng-controller="TestCtrl" ng-init="o={a: {name: 'AA', v: '00', g: '=='}, b: {name: 'BB', v: '11', g: '=='}}; a=o.a.v;">
+		<select ng-model="a" ng-options="v.v as v.name group by v.g for (k, v) in o" ng-change="show()">
+		</select>
+	</form> -->
+	<!-- <div ng-controller="TestCtrl" ng-class="cls">
+	</div>
+
+	<ul ng-init="l=[1,2,3,4]">
+		<li ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="m in l">{{ m }}</li>
+	</ul> -->
+
+	<!-- <div ng-show="true">1</div>
+
+	<div ng-show="false">2</div>
+
+	<div ng-hide="true">3</div>
+
+	<div ng-hide="false">4</div>
+	<div ng-init="a=2">
+		<ul ng-switch on="a">
+			<li ng-switch-when="1">1</li>
+			<li ng-switch-when="2">2</li>
+			<li ng-switch-default>other</li>
+		</ul>
+	</div> -->
+	
+	<!-- <div ng-controller="TestCtrl">
+		{{ data | orderBy: 'age' }} <br />
+		{{ data | orderBy: '-age' }} <br />
+		{{ data | orderBy: '-age' | limitTo: 2 }} <br />
+		{{ data | orderBy: ['-age', 'name'] }} <br />
+	</div> -->
+	<!-- <div ng-controller="TestCtrl">
+		{{ data | filter: 'b' }} <br />
+		{{ data | filter: '!B' }} <br />
+	</div> -->
+	<div ng-controller="TestCtrl">
+		{{ a | date: 'yyyy-MM-dd HH:mm:ss' }}
+	</div>  
+
+	<script type="text/javascript">
+		var TestCtrl =function($scope){
+			$scope.a = ((new Date().valueOf()));
+		}
+		angular.bootstrap(document.documentElement);
+		var a = {'x': '123'};
+		var b = angular.copy(a);
+		a.x ='456';
+		console.log(b);
+var a = {'x': '123'};
+
+  var b = {'xx': '456'};
+
+  angular.extend(b, a);
+
+  console.log(b);
+var l = {a: '1', b: '2'};
+
+  angular.forEach(l, function(v, k){console.log(k +': '+ v)});
+
+  
+
+  var l = ['a', 'b', 'c'];
+
+  angular.forEach(l, function(v, i, o){console.log(v)});
+
+  
+
+  var context = {'t': 'xx'};
+
+
+	</script>
+
+	<!-- <script type="text/javascript" charset="utf-8">
+		var BoxCtrl =function($scope, $element){
+			//$element 就是一个 jQuery 对象
+			var e = $element.children().eq(0);
+			$scope.w = e.width();
+			$scope.h = e.height();
+			$scope.click =function(){
+				$scope.w = parseInt($scope.w) +10;
+				$scope.h = parseInt($scope.h) +10;
+			}
+			$scope.$watch('w',
+				function(to, from){
+					e.width(to);
+				}
+			);
+			$scope.$watch('h',
+				function(to, from){
+					e.height(to);
+				}
+			);
+			$scope.a = '123';
+		}
+		angular.bootstrap(document.documentElement);
+	</script> -->
+	
+	<!-- <script type="text/javascript" charset="utf-8">
+		var TestCtrl =function($scope,$element){
+			$scope.width =1000;
+			$scope.$watch('width',
+				function(to, from){
+					$element.children(':first').width(to);
+				}
+			);
+		}	
+		var TestCtrl =function($scope){
+			$scope.style = {width:100};
+		}
+
+		angular.bootstrap(document.documentElement);
+	</script> -->
+	<!-- <script type="text/javascript" charset="utf-8">			
+		var TestCtrl =function($scope){
+			$scope.style1 = {width:100};
+			$scope.style1 = {height:100};
+		};
+		angular.bootstrap(document.documentElement);
+	</script> -->
+	<!-- <script type="text/javascript" charset="utf-8">			
+		var TestCtrl = function($scope){
+			$scope.obj_list = [{name: 'A'}, {name: 'B'}];
+		}
+		angular.bootstrap(document.documentElement);
+	</script> -->
+	<!-- <script type="text/javascript" charset="utf-8">			
+		var TestCtrl = function($scope){
+			$scope.obj_list = [1,2,3,4];
+		}
+		angular.bootstrap(document.documentElement);
+	</script>--> 
+<!-- 	<script type="text/javascript" charset="utf-8">			
+		var TestCtrl = function($scope){
+			//$scope.see = function(){
+			//  alert($scope.test_form);
+			//  alert($scope.test_form.a);
+			//}
+			//$scope.see = function(){
+			//	console.log($scope.test_form.$error);
+			//}
+			//$scope.a = 'AA';
+			$scope.show =function(){
+				console.log($scope.a);
+			}
+		}
+		angular.bootstrap(document.documentElement);
+	</script> -->  
+	<!-- <script type="text/javascript">
+		var TestCtrl =function($scope){
+			$scope.data = [
+			  {name:'B', age:4},  
+			  {name:'A', age:1},  
+			  {name:'D', age:3},  
+			  {name:'C', age:3},  
+			];
+		}
+		angular.bootstrap(document.documentElement);
+	</script>   -->
+	<!-- <script type="text/javascript">
+		var TestCtrl =function($scope){
+			$scope.data = [
+			  {name:'B', age:4},  
+			  {name:'A', age:1},  
+			  {name:'D', age:3},  
+			  {name:'C', age:3}, 
+			];
+		}
+		angular.bootstrap(document.documentElement);
+	</script> -->
+
+
+</body>
+</html>
+

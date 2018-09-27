@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>animation-name_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+div{position:absolute;top:50%;left:50%;width:300px;height:150px;margin:-75px 0 0 -150px;}
+.over{border:3px solid #eee;background:#e0e0e0;}
+.text{font:bold 14px/150px Georgia;text-align:center;}
+.over{
+    -webkit-animation:animations 2.5s ease-out forwards,animations3 1s ease-out 2.5s forwards;
+    -moz-animation:animations 2.5s ease-out forwards,animations3 1s ease-out 2.5s forwards;
+    animation:animations 2.5s ease-out forwards,animations3 1s ease-out 2.5s forwards;
+}
+@-webkit-keyframes animations{
+    0%{-webkit-transform:scale(0);opacity:0;}
+    40%{-webkit-transform:scale(1);opacity:1;}
+    100%{opacity:1;}
+}
+@-moz-keyframes animations{
+    0%{-moz-transform:scale(0);opacity:0;}
+    40%{-moz-transform:scale(1);opacity:1;}
+    100%{opacity:1;}
+}
+@keyframes animations{
+    0%{transform:scale(0);opacity:0;}
+    40%{transform:scale(1);opacity:1;}
+    100%{opacity:1;}
+}
+.text{
+    opacity: 0;
+    -webkit-animation:animations2 1.5s ease-out 1s forwards;
+    -moz-animation:animations2 1.5s ease-out 1s forwards;
+    animation:animations2 1.5s ease-out 1s forwards;
+}
+@-webkit-keyframes animations2{
+    0%{-webkit-transform:scale(4);opacity:0;}
+    40%{-webkit-transform:scale(2);opacity:1;}
+    70%{-webkit-transform:scale(2);opacity:1;}
+    100%{-webkit-transform:scale(5);opacity:0;}
+}
+@-moz-keyframes animations2{
+    0%{-moz-transform:scale(4);opacity:0;}
+    40%{-moz-transform:scale(2);opacity:1;}
+    70%{-moz-transform:scale(2);opacity:1;}
+    100%{-moz-transform:scale(5);opacity:0;}
+}
+@keyframes animations2{
+    0%{transform:scale(4);opacity:0;}
+    40%{transform:scale(2);opacity:1;}
+    70%{transform:scale(2);opacity:1;}
+    100%{transform:scale(5);opacity:0;}
+}
+@-webkit-keyframes animations3{
+    0%{-webkit-transform:scale(1);opacity:1;}
+    100%{-webkit-transform:scale(0);opacity:0;}
+}
+@-moz-keyframes animations3{
+    0%{-moz-transform:scale(1);opacity:1;}
+    100%{-moz-transform:scale(0);opacity:0;}
+}
+@keyframes animations3{
+    0%{transform:scale(1);opacity:1;}
+    100%{transform:scale(0);opacity:0;}
+}
+</style>
+</head>
+<body>
+<div class="over"></div>
+<div class="text">CSS3 Animations</div>
+</body>
+</html>
+			

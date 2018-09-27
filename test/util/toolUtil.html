@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+div {width:200px;height:200px;background:red;}
+</style>
+<script src="util.js"></script>
+<script>
+$(function(){
+	$('btn1').onclick = function(){
+		//alert($('div1').style.width);
+		//alert(getStyle($('div1'),'width'));	
+		alert(getComputedStyle($('div1')).width);
+		//alert($('div1').currentStyle.width);
+	}
+});
+</script>
+</head>
+
+<body>
+<input id="btn1" type="button" value="按钮"/>
+<div id="div1" style="width:100px;"></div>
+</body>
+</html>
